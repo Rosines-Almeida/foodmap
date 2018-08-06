@@ -15,7 +15,7 @@ function initMap() {
 
 /*FUNÇÃO efeito delay  na pagina i */
 $(document).ready(function () {
-  $('.box-2').delay('1000').fadeIn('slow')
+  $('.box-2').delay('3000').fadeIn('slow')
 
 
   /*Função filtrar */

@@ -1,1 +1,83 @@
-/*Add your CSS*/
+ /*Seção */
+
+#map {
+  height: 30%;
+  width: 50%;
+}
+
+
+/*fontes*/
+
+body {
+  background-color: #2B2B2B;
+  font-family: 'Do Hyeon', sans-serif;
+}
+
+h2 {
+  color: #FFC107;
+}
+
+.logo-inicial,
+.box-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.box-2 h1 {
+  color: #FFC107;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo-inicial {
+  background-color: #2B2B2B;
+  color: #FFC107;
+}
+
+.logo {
+  font-size: 42px;
+}
+
+.box-2 {
+  background-color: #2B2B2B;
+  display: none;
+}
+
+#map {
+  height: 300px;
+  width: 600px;
+  border: 2px solid white;
+}
+
+
+/*SEÇÂO FORMULARIO*/
+
+.section-form {
+  display: flex;
+  justify-content: center;
+}
+
+input {
+  width: 35%;
+}
+
+.btn-filtrar {
+  background-color: #FFC107;
+}
+
+
+/*imagens*/
+
+#img-restaurant {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#img-restaurant img {
+  width: 140px;
+  height: 160px;
+}

@@ -1,7 +1,7 @@
 # Foodmap
  
 <p> Desafio do Sprint-3 da Laboratoria</p>
-<p>link do projeto https://</p>
+<p>link do projeto https://rosines-almeida.github.io/foodmap/ </p>
 
 ### Objetivo
 

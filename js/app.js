@@ -2,7 +2,7 @@
     $(".box-2").fadeIn(5000).delay('slow');
     
                
-        console.log('oi')   
+ 
    
    $(function() {
     var completeType = [
@@ -42,11 +42,7 @@
  
 
 $.each(restaurantes, function(index, value){
-     
-    $('#restaurants').append('<div> <img id =img-list width = 2300px height=40px  data-toggle="modal" data-target="#modalRestautante"src=' + value.image + '> <h6>'+ value.name +'</h6></div>')
-    
-
- 
+  $('#restaurants').append('<div class="card-group"><div class="card"><img class="card-img-top" id ="img-list" alt= "Card image cap" src='+ value.image + '><div class="card-body"> <h5 class="card-title">'+ value.name + '</h5>  </div></div>')
 })
  
 
@@ -60,14 +56,10 @@ $('#btn-filter').click(function filter(){
              var restaurantType = value.type;
              var restaurantName = value.name
              option = $(".input").val().toLowerCase();
-             console.log(option)
+        
             if(option == restaurantType || option == restaurantName){
-              
-     console.log (value.name) 
-    
-     $('#listRestaurants').append('<div> <img id =img-list width = 2300px height=40px  data-toggle="modal" data-target="#modalRestautante"src=' + value.image + ' val =' + index + " alt=" + value.name + '> <h6>'+ value.name +'</h6> </div>')
-   
-    
+           $('#listRestaurants').append('<div class="card-group"><div class="card"><img class="card-img-top" id ="img-list" data-toggle="modal" data-target="#modalRestautante" src='+ value.image + ' val =' + index + ' alt=' + 'alt= "Card image cap"><div class="card-body"> <h5 class="card-title">'+ value.name + '</h5>  </div></div>')
+     
 }
 }) 
 $('.input').val("");
@@ -78,9 +70,11 @@ $('#listRestaurants img').click(function (){
     var index = $(this).attr('val');
     alt = $(this).attr('alt')
  $('#name-restaurant').html('')
+ $('#type-modal').html('');
+ $('#description-modal').html('');
   
-    $('#name-restaurant').append( restaurantes[index].name   )
-   $('#type-modal').append(restaurantes[index].type  )
+   $('#name-restaurant').append( restaurantes[index].name   )
+   $('#type-modal').append(restaurantes[index].type)
    $('#description-modal').append( restaurantes[index].description  )
   var lat = restaurantes[index].latitude;
   var long = restaurantes[index].longitude;

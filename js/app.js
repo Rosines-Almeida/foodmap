@@ -42,7 +42,7 @@
  
 
 $.each(restaurantes, function(index, value){
-  $('#restaurants').append('<div class="card-group"><div class="card"><img class="card-img-top" id ="img-list" alt= "Card image cap" src='+ value.image + '><div class="card-body"> <h5 class="card-title">'+ value.name + '</h5>  </div></div>')
+  $('#restaurants').append('<div class="card-group mt-3"><div class="card"><img class="card-img-top" id ="img-list" alt= "Card image cap" src='+ value.image + '><div class="card-body"> <h5 class="card-title">'+ value.name + '</h5>  </div></div>')
 })
  
 
@@ -58,7 +58,7 @@ $('#btn-filter').click(function filter(){
              option = $(".input").val().toLowerCase();
         
             if(option == restaurantType || option == restaurantName){
-           $('#listRestaurants').append('<div class="card-group"><div class="card"><img class="card-img-top" id ="img-list" data-toggle="modal" data-target="#modalRestautante" src='+ value.image + ' val =' + index + ' alt=' + 'alt= "Card image cap"><div class="card-body"> <h5 class="card-title">'+ value.name + '</h5>  </div></div>')
+           $('#listRestaurants').append('<div class="mt-3 card-group"><div class="card"><img class="card-img-top" id ="img-list" data-toggle="modal" data-target="#modalRestautante" src='+ value.image + ' val =' + index + ' alt=' + 'alt= "Card image cap"><div class="card-body"> <h5 class="card-title">'+ value.name + '</h5>  </div></div>')
      
 }
 }) 

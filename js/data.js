@@ -49,7 +49,7 @@ const restaurantes = [
   },
   {
     "name": "Loving Hut Jardins",
-    "image": "loving.jpg",
+    "image": "assets/loving.jpg",
     "latitude": -23.5539487,
     "longitude": -46.65767779999999,
     "description": "Outpost of a vegan counter-serve chain with Asian-accented  menus that vary by location.",

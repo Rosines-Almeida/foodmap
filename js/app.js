@@ -1,22 +1,18 @@
  $(document).ready(function(){
     $(".box-2").fadeIn(5000).delay('slow');
-    
-               
- 
-   
-   $(function() {
-    var completeType = [
-      "Arabe",
-      "Fast food",
-      "Italiana",
-      "Vegana",
-      'Japonesa',
-
-    ];
-    $("#tags").autocomplete({
-      source: completeType  
+    function autoCompleteType() {
+      var autoCompleteType = [];
+      for (type in  restaurantes) {       
+      var types = restaurantes[type].type
+      autoCompleteType.push(types)
+    }
+      $(function() {
+        $("#tags").autocomplete({
+          source: autoCompleteType
+        });
     });
-  });
+  }
+  autoCompleteType();
 
   loadMap(restaurantes);
 
@@ -73,8 +69,9 @@ $('#listRestaurants img').click(function (){
  $('#type-modal').html('');
  $('#description-modal').html('');
   
+  
    $('#name-restaurant').append( restaurantes[index].name   )
-   $('#type-modal').append(restaurantes[index].type)
+   $('#type-modal').append('<strong>Tipo de comida: </strong>' + restaurantes[index].type)
    $('#description-modal').append( restaurantes[index].description  )
   var lat = restaurantes[index].latitude;
   var long = restaurantes[index].longitude;
